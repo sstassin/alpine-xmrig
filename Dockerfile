@@ -8,6 +8,7 @@ RUN   apk --no-cache upgrade && \
         build-base && \
       git clone https://github.com/xmrig/xmrig && \
       cd xmrig && \
+      git checkout dev && \
       mkdir build && \
       cmake -DWITH_HTTPD=OFF -DCMAKE_BUILD_TYPE=Release . && \
       make && \
